@@ -15,7 +15,8 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         # tells setup to install the launch folder?
-        (os.path.join('share', package_name, 'launch'))
+        ((os.path.join('share', package_name, 'launch')),
+            glob('launch/*.launch.py'))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
